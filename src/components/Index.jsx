@@ -1,4 +1,5 @@
 import React from 'react'
+import $ from 'jquery'
 
 function Index() {
 
@@ -13,9 +14,9 @@ function Index() {
 
    // }
 
-   // $("#main").click(function(){
-   //    $("#navbarSupportedContent").toggleClass("nav-normal")
-   // })
+   $("#main").click(function(){
+      $("#navbarSupportedContent").toggleClass("nav-normal")
+   })
 
 
    return (
