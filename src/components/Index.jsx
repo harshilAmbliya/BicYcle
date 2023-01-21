@@ -1,5 +1,5 @@
 import React from 'react'
-import $ from 'jquery'
+// import $ from 'jquery'
 
 function Index() {
 
@@ -14,9 +14,17 @@ function Index() {
 
    // }
 
-   $("#main").click(function(){
-      $("#navbarSupportedContent").toggleClass("nav-normal")
-   })
+      const handleopenclick = () =>{
+         document.getElementById('navbarSupportedContent').classList.add('nav-normal');
+         handleclosenav();
+      }
+      const handleclosenav = () =>{
+         document.getElementById('navbarSupportedContent').classList.remove('nav-normal');
+      }
+
+   // $("#main").click(function(){
+   //    $("#navbarSupportedContent").toggleClass("nav-normal")
+   // })
 
 
    return (
@@ -102,8 +110,8 @@ function Index() {
                   <div></div>
                </form>
             </div>
-            <div id="main">
-               <span style={{fontSize : "36px",cursor: "pointer" ,color : "#fff"}} onClick={openNav}><img alt='' src="./Sorces/images/toggle-icon.png" style={{height: "30px"}} /></span>
+            <div id="main" onClick={handleopenclick} >
+               <span style={{fontSize : "36px",cursor: "pointer" ,color : "#fff"}} onClick={openNav }  ><img alt='' src="./Sorces/images/toggle-icon.png" style={{height: "30px"}} /></span>
             </div>
          </nav>
          {/* font-size:36px;cursor:pointer; color: #fff */}
