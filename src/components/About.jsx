@@ -64,7 +64,7 @@ function About() {
                         </form>
                     </div>
                     <div id="main" onClick={handleopenclick}>
-                        <span style={{ fontSize: '36px', cursor: 'pointer', color: '#fff' }} onclick={openNav}><img alt="" src="./sorces/images/toggle-icon.png" style={{ height: '30px' }} /></span>
+                        <span style={{ fontSize: '36px', cursor: 'pointer', color: '#fff' }} onClick={openNav}><img alt="" src="./sorces/images/toggle-icon.png" style={{ height: '30px' }} /></span>
                     </div>
                 </nav>
                 {/* <!-- banner section start --> */}
@@ -148,7 +148,7 @@ function About() {
                         <div className="col-lg-8 col-sm-12 padding_0">
                             <div className="map_main">
                                 <div className="map-responsive">
-                                    <iFrame src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=Eiffel+Tower+Paris+France" width="600" height="400" frameborder="0" style={{ border: '0', width: '100%' }} allowfullscreen=""></iFrame>
+                                    <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=Eiffel+Tower+Paris+France" width="600" title='map'  height="400" frameBorder="0" style={{ border: '0', width: '100%' }} allowFullScreen="" />
                                 </div>
                             </div>
                         </div>

@@ -24,7 +24,7 @@ function Index() {
       <>
          <div className="header_section header_bg">
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
-               <a href="index.html" className="logo"><img alt="" src="./sorces/images/logo.png" /></a>
+               <Link to="/" className="logo"><img alt="" src="./sorces/images/logo.png" /></Link>
                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span className="navbar-toggler-icon"></span>
                </button>
