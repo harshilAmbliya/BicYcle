@@ -1,5 +1,6 @@
-import React from 'react'
-// import $ from 'jquery'
+import React ,{useState} from 'react'
+import { Link } from 'react-router-dom';
+
 
 function Index() {
 
@@ -8,116 +9,62 @@ function Index() {
       document.getElementById("main").style.marginLeft = "250px";
    }
 
-   // function closeNav() {
-   //    document.getElementById("mySidenav").style.width = "0";
-   //    document.getElementById("main").style.marginLeft = "0";
-
-   // }
-
-      const handleopenclick = () =>{
-         document.getElementById('navbarSupportedContent').classList.add('nav-normal');
-         handleclosenav();
-      }
-      const handleclosenav = () =>{
-         document.getElementById('navbarSupportedContent').classList.remove('nav-normal');
-      }
-
-   // $("#main").click(function(){
-   //    $("#navbarSupportedContent").toggleClass("nav-normal")
-   // })
-
+  const [navmode, setnavmode] = useState(false);
+  const handleopenclick = () => {
+     if (navmode === true) {
+        document.getElementById('navbarSupportedContent').classList.add('nav-normal');
+        setnavmode(false)
+     } else {
+        document.getElementById('navbarSupportedContent').classList.remove('nav-normal');
+        setnavmode(true)
+     }
+  }
 
    return (
       <>
          <div className="header_section header_bg">
-            {/* <nav className="navbar navbar-expand-lg navbar-light bg-light">
-               <a href="index.html" className="logo"><img alt='' src="./Sorces/images/logo.png" /></a>
+            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+               <a href="index.html" className="logo"><img alt="" src="./sorces/images/logo.png" /></a>
                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span className="navbar-toggler-icon"></span>
                </button>
                <div className="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul className="navbar-nav mr-auto">
                      <li className="nav-item active">
-                        <a className="nav-link" href="index.html">Home</a>
+                        <Link className="nav-link" to="/" >Home</Link>
+
                      </li>
                      <li className="nav-item">
-                        <a className="nav-link" href="about.html">About</a>
+                        <Link className="nav-link" to="about">About</Link>
                      </li>
                      <li className="nav-item">
-                        <a className="nav-link" href="cycle.html">Our Cycle</a>
+                        <Link className="nav-link" to="cycle">Our Cycle</Link>
                      </li>
                      <li className="nav-item">
-                        <a className="nav-link" href="shop.html">Shop</a>
+                        <Link className="nav-link" to="shop">Shop</Link>
                      </li>
                      <li className="nav-item">
-                        <a className="nav-link" href="news.html">News</a>
+                        <Link className="nav-link" to="news">News</Link>
                      </li>
                      <li className="nav-item">
-                        <a className="nav-link" href="contact.html">Contact Us</a>
+                        <Link className="nav-link" to="contact">Contact Us</Link>
                      </li>
                   </ul>
                   <form className="form-inline my-2 my-lg-0">
                      <div className="login_menu">
                         <ul>
-                           <li><a href="/">Login</a></li>
-                           <li><a href="/"><img alt='' src="./Sorces/images/trolly-icon.png" /></a></li>
-                           <li><a href="/"><img alt='' src="./Sorces/images/search-icon.png" /></a></li>
+                           <li><Link to="/">Login</Link></li>
+                           <li><Link to="shop"><img alt="" src="./sorces/images/trolly-icon.png" /></Link></li>
+                           <li><Link to="/"><img alt="" src="./sorces/images/search-icon.png" /></Link></li>
                         </ul>
                      </div>
                      <div></div>
                   </form>
                </div>
-               <div id="main">
-                  <span style={{ fontSize: "36px", cursor: "pointer", color: "#fff" }} onClick={openNav}><img alt='' src="./Sorces/images/toggle-icon.png" style={{ height: "30px" }} /></span>
+               <div id="main" onClick={handleopenclick}>
+                  <span style={{ fontSize: '36px', cursor: 'pointer', color: '#fff' }} onclick={openNav}><img alt="" src="./sorces/images/toggle-icon.png" style={{ height: '30px' }} /></span>
                </div>
-            </nav> */}
-
-{/* start new navbar */}
-<nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <a href="index.html" className="logo"><img alt='' src="./Sorces/images/logo.png"/></a>
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
-               <ul className="navbar-nav mr-auto">
-                  <li className="nav-item active">
-                     <a className="nav-link" href="index.html">Home</a>
-                  </li>
-                  <li className="nav-item">
-                     <a className="nav-link" href="about.html">About</a>
-                  </li>
-                  <li className="nav-item">
-                     <a className="nav-link" href="cycle.html">Our Cycle</a>
-                  </li>
-                  <li className="nav-item">
-                     <a className="nav-link" href="shop.html">Shop</a>
-                  </li>
-                  <li className="nav-item">
-                     <a className="nav-link" href="news.html">News</a>
-                  </li>
-                  <li className="nav-item">
-                     <a className="nav-link" href="contact.html">Contact Us</a>
-                  </li>
-               </ul>
-               <form className="form-inline my-2 my-lg-0">
-                  <div className="login_menu">
-                     <ul>
-                        <li><a href="/">Login</a></li>
-                        <li><a href="/"><img alt='' src="./Sorces/images/trolly-icon.png"/></a></li>
-                        <li><a href="/"><img alt='' src="./Sorces/images/search-icon.png"/></a></li>
-                     </ul>
-                  </div>
-                  <div></div>
-               </form>
-            </div>
-            <div id="main" onClick={handleopenclick} >
-               <span style={{fontSize : "36px",cursor: "pointer" ,color : "#fff"}} onClick={openNav }  ><img alt='' src="./Sorces/images/toggle-icon.png" style={{height: "30px"}} /></span>
-            </div>
-         </nav>
-         {/* font-size:36px;cursor:pointer; color: #fff */}
-{/* nd new navbar */}
-
-
+            </nav>
             <div className="banner_section layout_padding">
                <div id="main_slider" className="carousel slide" data-ride="carousel">
                   <div className="carousel-inner">
@@ -388,7 +335,7 @@ function Index() {
                   <div className="col-lg-8 col-sm-12 padding_0">
                      <div className="map_main">
                         <div className="map-responsive">
-                           <iFrame  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=Eiffel+Tower+Paris+France" width="600" height="400" frameBorder="0" style={{ border: "0", width: "100%" }} allowFullScreen="" />
+                           <iFrame src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=Eiffel+Tower+Paris+France" width="600" height="400" frameBorder="0" style={{ border: "0", width: "100%" }} allowFullScreen="" />
                         </div>
                      </div>
                   </div>
