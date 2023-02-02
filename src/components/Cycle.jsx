@@ -34,19 +34,19 @@ function Cycle() {
 
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="about">About</Link>
+                                <Link className="nav-link" to="/about">About</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="cycle">Our Cycle</Link>
+                                <Link className="nav-link" to="/cycle">Our Cycle</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="shop">Shop</Link>
+                                <Link className="nav-link" to="/shop">Shop</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="news">News</Link>
+                                <Link className="nav-link" to="/news">News</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="contact">Contact Us</Link>
+                                <Link className="nav-link" to="/contact">Contact Us</Link>
                             </li>
                         </ul>
                         <form className="form-inline my-2 my-lg-0">

@@ -1,24 +1,24 @@
-import React ,{useState} from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 
 
 function Index() {
 
    function openNav() {
-      document.getElementById("mySidenav").style.width = "250px";
+      // document.getElementById("mySidenav").style.width = "250px";
       document.getElementById("main").style.marginLeft = "250px";
    }
 
-  const [navmode, setnavmode] = useState(false);
-  const handleopenclick = () => {
-     if (navmode === true) {
-        document.getElementById('navbarSupportedContent').classList.add('nav-normal');
-        setnavmode(false)
-     } else {
-        document.getElementById('navbarSupportedContent').classList.remove('nav-normal');
-        setnavmode(true)
-     }
-  }
+   const [navmode, setnavmode] = useState(false);
+   const handleopenclick = () => {
+      if (navmode === true) {
+         document.getElementById('navbarSupportedContent').classList.add('nav-normal');
+         setnavmode(false)
+      } else {
+         document.getElementById('navbarSupportedContent').classList.remove('nav-normal');
+         setnavmode(true)
+      }
+   }
 
    return (
       <>
@@ -29,28 +29,28 @@ function Index() {
                   <span className="navbar-toggler-icon"></span>
                </button>
                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul className="navbar-nav mr-auto">
+                  <ul className="navbar-nav ">
                      <li className="nav-item active">
                         <Link className="nav-link" to="/" >Home</Link>
 
                      </li>
                      <li className="nav-item">
-                        <Link className="nav-link" to="about">About</Link>
+                        <Link className="nav-link" to="/about">About</Link>
                      </li>
                      <li className="nav-item">
-                        <Link className="nav-link" to="cycle">Our Cycle</Link>
+                        <Link className="nav-link" to="/cycle"> Cycle</Link>
                      </li>
                      <li className="nav-item">
-                        <Link className="nav-link" to="shop">Shop</Link>
+                        <Link className="nav-link" to="/shop">Shop</Link>
                      </li>
                      <li className="nav-item">
-                        <Link className="nav-link" to="news">News</Link>
+                        <Link className="nav-link" to="/news">News</Link>
                      </li>
                      <li className="nav-item">
-                        <Link className="nav-link" to="contact">Contact Us</Link>
+                        <Link className="nav-link" to="/contact">Contact </Link>
                      </li>
                   </ul>
-                  <form className="form-inline my-2 my-lg-0">
+                  {/* <form className="form-inline my-2 my-lg-0">
                      <div className="login_menu">
                         <ul>
                            <li><Link to="/">Login</Link></li>
@@ -59,10 +59,24 @@ function Index() {
                         </ul>
                      </div>
                      <div></div>
+                  </form> */}
+                  <form action="">
+
+                     <div className="d-flex ">
+                        
+                        <div className="px-1 mx-2"><Link to="/" style={{fontSize: "15px" , fontWeight : "bolder"}}>Login</Link></div>
+
+                        {/* <Link to="shop" className="px-1 mx-2"> <i className="fa-solid fa-cart-shopping" ></i> </Link> */}
+                        <div className="px-1 mx-2"><Link to="/"><i className="fa-solid fa-cart-shopping" style={{fontSize: "15px"}}></i> </Link></div>
+
+                        <div className="px-1 mx-2"><Link to="/"><i className="fa-solid fa-magnifying-glass" style={{fontSize: "15px"}} ></i> </Link></div>
+
+                     </div>
+
                   </form>
                </div>
                <div id="main" onClick={handleopenclick}>
-                  <span style={{ fontSize: '36px', cursor: 'pointer', color: '#fff' }} onclick={openNav}><img alt="" src="./sorces/images/toggle-icon.png" style={{ height: '30px' }} /></span>
+                  <span style={{ fontSize: '36px', cursor: 'pointer', color: '#fff' }} onClick={openNav}><img alt="" src="./sorces/images/toggle-icon.png" style={{ height: '30px' }} /></span>
                </div>
             </nav>
             <div className="banner_section layout_padding">
@@ -335,7 +349,7 @@ function Index() {
                   <div className="col-lg-8 col-sm-12 padding_0">
                      <div className="map_main">
                         <div className="map-responsive">
-                           <iFrame src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=Eiffel+Tower+Paris+France" width="600" height="400" frameBorder="0" style={{ border: "0", width: "100%" }} allowFullScreen="" />
+                           <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=Eiffel+Tower+Paris+France" width="600" height="400" frameBorder="0" title='map' style={{ border: "0", width: "100%" }} allowFullScreen="" />
                         </div>
                      </div>
                   </div>
