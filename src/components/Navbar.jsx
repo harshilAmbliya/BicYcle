@@ -27,7 +27,7 @@ function Navbar() {
   return (
     <>
     <div className="header_section header_bg">
-           <div className="fixed-top">
+           <div className="">
            <nav className="navbar navbar-expand-lg navbar-light bg-light">
                <Link to="/" className="logo"><img alt="" src="./sorces/images/logo.png" /></Link>
                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
